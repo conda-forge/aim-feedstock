@@ -1,13 +1,13 @@
 {% set name = "aim" %}
-{% set version = "2.6.0" %}
+{% set version = "2.7.1" %}
 
 package:
-  name: "{{ name|lower }}"
-  version: "{{ version }}"
+  name: {{ name|lower }}
+  version: {{ version }}
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 83df85c5d4eadf8f9aa4c3cbe89564584627e4f7c90606be256bd7e36f009345
+  sha256: 8a166cbc052ba90ed3b9d38a8a073a37810e52eb8e263b1182f4166f487d37a4
 
 build:
   number: 0
@@ -64,7 +64,7 @@ about:
   license: MIT
   license_family: MIT
   license_file: LICENSE
-  summary: "A super-easy way to record, search and compare 1000s of ML training runs"
+  summary: A super-easy way to record, search and compare 1000s of ML training runs
   dev_url: https://github.com/aimhubio/aim
 
 extra:
