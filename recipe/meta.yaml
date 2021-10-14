@@ -1,5 +1,5 @@
 {% set name = "aim" %}
-{% set version = "2.7.1" %}
+{% set version = "2.7.3" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 8a166cbc052ba90ed3b9d38a8a073a37810e52eb8e263b1182f4166f487d37a4
+  sha256: 318babdf1e97d9be0eae9b80dc3b6e8c6653075b83683ff8e3cdee734ead43c1
 
 build:
   number: 0
