@@ -26,7 +26,7 @@ requirements:
     - psutil >=5.6.7
   run:
     - aimrecords ==0.0.7
-    - aimrocks ==0.0.9
+# - aimrocks ==0.0.9
     - alembic ==1.6.0
     - anytree >=2.8.0
     - click >=6.7
@@ -46,7 +46,7 @@ requirements:
     - pysqlite3 ==0.4.6
     - python
     - pytz ==2020.1
-    - restrictedpython >=5.1
+# - restrictedpython >=5.1
     - requests >=2.0.0
     - sqlalchemy ==1.4.13
     - tensorboard ==2.3.0
@@ -71,5 +71,6 @@ about:
 
 extra:
   recipe-maintainers:
+    - psortos
     - bubblyorca
     - mxr-conda
