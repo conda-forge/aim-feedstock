@@ -16,6 +16,9 @@ build:
     - aim=aim.cli.cli:cli_entry_point
 
 requirements:
+  build: 
+    - {{ compiler('cxx') }}
+
   host:
     - pip
     - python
