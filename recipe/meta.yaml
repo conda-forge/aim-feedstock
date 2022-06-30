@@ -1,5 +1,5 @@
 {% set name = "aim" %}
-{% set version = "2.7.4" %}
+{% set version = "3.0.3" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: ddff060a1e4ba6e4ba12aee60cdafced463ab659bfb4eb864ff5a688164810cf
+  sha256: 05a388019b9c59979a329f060a81a4feef0d3a2ed50c7be954583549dde14a7e
 
 build:
   number: 0
@@ -16,6 +16,9 @@ build:
     - aim=aim.cli.cli:cli_entry_point
 
 requirements:
+  build: 
+    - {{ compiler('cxx') }}
+
   host:
     - pip
     - python
@@ -24,8 +27,10 @@ requirements:
     - anytree >=2.8.0
     - pyrser >=0.2.0
     - psutil >=5.6.7
+    - cython >=0.20.0
   run:
     - aimrecords ==0.0.7
+    - aimrocks ==0.0.9
     - alembic ==1.6.0
     - anytree >=2.8.0
     - click >=6.7
@@ -46,6 +51,7 @@ requirements:
     - python
     - pytz ==2020.1
     - requests >=2.0.0
+    - RestrictedPython >=5.1
     - sqlalchemy ==1.4.13
     - tensorboard ==2.3.0
 
@@ -70,4 +76,5 @@ about:
 extra:
   recipe-maintainers:
     - psortos
+    - bubblyorca
     - mxr-conda
