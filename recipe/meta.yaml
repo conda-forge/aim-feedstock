@@ -10,7 +10,7 @@ source:
   sha256: ddff060a1e4ba6e4ba12aee60cdafced463ab659bfb4eb864ff5a688164810cf
 
 build:
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . -vv
   entry_points:
     - aim=aim.cli.cli:cli_entry_point
