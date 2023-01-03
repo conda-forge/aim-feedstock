@@ -17,11 +17,11 @@ requirements:
   build:
     - python                                           # [build_platform != target_platform]
     - cross-python_{{ target_platform }}               # [build_platform != target_platform]
-    - conda-forge/label/cython_dev::cython ==3.0.0a11  # [build_platform != target_platform]
+    - conda-forge/label/cython_dev::cython ==3.0.0a10  # [build_platform != target_platform]
   host:
     - python
     - pip
-    - conda-forge/label/cython_dev::cython ==3.0.0a11
+    - conda-forge/label/cython_dev::cython ==3.0.0a10
     - aimrocks ==0.2.1
   run:
     - python
