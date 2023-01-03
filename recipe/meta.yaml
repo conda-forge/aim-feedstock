@@ -22,7 +22,6 @@ requirements:
     - python
     - pip
     - conda-forge/label/cython_dev::cython ==3.0.0a11
-    - setuptools_scm
     - aimrocks ==0.2.1
   run:
     - python
