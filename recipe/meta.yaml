@@ -15,13 +15,13 @@ build:
 
 requirements:
   host:
-    - python >=3.7
+    - python
     - pip
     - cython >3
     - aimrocks ==0.2.1
     - protobuf >=3.11.0
   run:
-    - python >=3.7
+    - python
     - aim-ui =={{ version }}
     - aimrecords ==0.0.7
     - aimrocks ==0.2.1
