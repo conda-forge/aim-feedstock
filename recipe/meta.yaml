@@ -17,7 +17,7 @@ requirements:
   host:
     - python
     - pip
-    - cython >3
+    - conda-forge/label/cython_dev::cython ==3.0.0a9  # NOTE(hadim): only during building
     - aimrocks ==0.2.1
     - protobuf >=3.11.0
   run:
