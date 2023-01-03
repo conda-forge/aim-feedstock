@@ -14,12 +14,16 @@ build:
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
+  build:
+    - python                                 # [build_platform != target_platform]
+    - cross-python_{{ target_platform }}     # [build_platform != target_platform]
+    - cython ==3.0.0a9                       # [build_platform != target_platform]
   host:
     - python
     - pip
-    - conda-forge/label/cython_dev::cython ==3.0.0a9  # NOTE(hadim): only during building
+    - cython ==3.0.0a9
+    - setuptools_scm
     - aimrocks ==0.2.1
-    - protobuf >=3.11.0
   run:
     - python
     - aim-ui =={{ version }}
