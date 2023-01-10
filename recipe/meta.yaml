@@ -13,6 +13,7 @@ build:
   number: 0
   script: {{ PYTHON }} -m pip install . -vv
   # NOTE(hadim): windows is not available because of aimrocks missing there
+  # NOTE(hadim): for py310, it needs https://github.com/conda-forge/restrictedpython-feedstock/pull/6
   skip: true  # [win or py==310]
 
 requirements:
