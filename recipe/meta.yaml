@@ -52,6 +52,7 @@ requirements:
     - packaging >=15.0
     - python-dateutil
     - requests
+    - grpcio >=1.42.0
 
 test:
   imports:
