@@ -12,6 +12,8 @@ source:
 build:
   number: 0
   script: {{ PYTHON }} -m pip install . -vv
+  # NOTE(hadim): windows is not available because of aimrocks missing there
+  skip: true  # [win]
 
 requirements:
   build:
