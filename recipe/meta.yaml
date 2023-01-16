@@ -10,11 +10,10 @@ source:
   sha256: 933fc88eb661e090799226e1e21b35e0583a17dcf5fd4610c3f57bcb7fcb0d8d
 
 build:
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . -vv
   # NOTE(hadim): windows is not available because of aimrocks missing there
-  # NOTE(hadim): for py310, it needs https://github.com/conda-forge/restrictedpython-feedstock/pull/6
-  skip: true  # [win or py==310]
+  skip: true  # [win]
 
 requirements:
   build:
