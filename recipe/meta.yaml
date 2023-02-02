@@ -10,7 +10,7 @@ source:
   sha256: 933fc88eb661e090799226e1e21b35e0583a17dcf5fd4610c3f57bcb7fcb0d8d
 
 build:
-  number: 1
+  number: 1000
   script: {{ PYTHON }} -m pip install . -vv
   # NOTE(hadim): windows is not available because of aimrocks missing there
   skip: true  # [win]
@@ -48,7 +48,7 @@ requirements:
     - fastapi <0.68.0,>=0.65.0  # see https://github.com/aimhubio/aim/issues/2367
     - jinja2 >=2.10.0
     - pytz >=2019.1
-    - SQLAlchemy >=1.4.1
+    - SQLAlchemy >=1.4.1,<2
     - uvicorn >=0.12.0
     - Pillow >=8.0.0
     - protobuf <4.0.0,>=3.11.0  # see https://github.com/aimhubio/aim/issues/2455
