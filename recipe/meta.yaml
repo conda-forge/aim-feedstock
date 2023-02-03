@@ -1,5 +1,5 @@
 {% set name = "aim" %}
-{% set version = "3.15.2" %}
+{% set version = "3.16.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,10 +7,10 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/aim-{{ version }}.tar.gz
-  sha256: 933fc88eb661e090799226e1e21b35e0583a17dcf5fd4610c3f57bcb7fcb0d8d
+  sha256: 5e05c9d0ad0aaf8c4859bc717f6b51b13f563efd587d6135e93341d6a0aa9d52
 
 build:
-  number: 1000
+  number: 0
   script: {{ PYTHON }} -m pip install . -vv
   # NOTE(hadim): windows is not available because of aimrocks missing there
   skip: true  # [win]
