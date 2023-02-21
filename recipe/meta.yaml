@@ -57,7 +57,7 @@ requirements:
     - python-dateutil
     - requests
     - grpcio >=1.42.0
-    - analytics-python
+    - analytics-python >=2.2.2
 
 test:
   imports:
