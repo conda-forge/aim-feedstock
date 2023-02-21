@@ -1,5 +1,5 @@
 {% set name = "aim" %}
-{% set version = "3.15.2" %}
+{% set version = "3.16.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,10 +7,10 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/aim-{{ version }}.tar.gz
-  sha256: 933fc88eb661e090799226e1e21b35e0583a17dcf5fd4610c3f57bcb7fcb0d8d
+  sha256: 5e05c9d0ad0aaf8c4859bc717f6b51b13f563efd587d6135e93341d6a0aa9d52
 
 build:
-  number: 1000
+  number: 0
   script: {{ PYTHON }} -m pip install . -vv
   # NOTE(hadim): windows is not available because of aimrocks missing there
   skip: true  # [win]
@@ -19,43 +19,45 @@ requirements:
   build:
     - python                                    # [build_platform != target_platform]
     - cross-python_{{ target_platform }}        # [build_platform != target_platform]
-    - cython ==3.0.0a10                         # [build_platform != target_platform]
-    - aimrocks ==0.2.1                          # [build_platform != target_platform]
+    - cython ==3.0.*                            # [build_platform != target_platform]
+    - aimrocks ==0.3.1                          # [build_platform != target_platform]
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
     - make  # [unix]
   host:
     - python
     - pip
-    - cython ==3.0.0a10
-    - aimrocks ==0.2.1
+    - cython ==3.0.*
+    - aimrocks ==0.3.1
   run:
+    # Sync deps with https://github.com/aimhubio/aim/blob/v3.16.0/setup.py
     - python
     - aim-ui =={{ version }}
     - aimrecords ==0.0.7
-    - aimrocks ==0.2.1
+    - aimrocks ==0.3.1
     - cachetools >=4.0.0
     - click >=7.0
     - cryptography >=3.0
-    - filelock >=3.3.0
-    - numpy >=1.12.0
+    - filelock >=3.3.0,<4
+    - numpy >=1.12.0,<2
     - psutil >=5.6.7
     - py3nvml >=0.2.5
     - RestrictedPython >=5.1
     - tqdm >=4.20.0
     - aiofiles >=0.5.0
-    - alembic >=1.4.0
-    - fastapi <0.68.0,>=0.65.0  # see https://github.com/aimhubio/aim/issues/2367
-    - jinja2 >=2.10.0
+    - alembic >=1.4.0,<2
+    - fastapi >=0.69.0,<1
+    - jinja2 >=2.10.0,<4
     - pytz >=2019.1
     - SQLAlchemy >=1.4.1,<2
-    - uvicorn >=0.12.0
+    - uvicorn >=0.12.0,<1
     - Pillow >=8.0.0
-    - protobuf <4.0.0,>=3.11.0  # see https://github.com/aimhubio/aim/issues/2455
+    - protobuf >=3.9.2,<5
     - packaging >=15.0
     - python-dateutil
     - requests
     - grpcio >=1.42.0
+    - analytics-python >=2.2.2
 
 test:
   imports:
