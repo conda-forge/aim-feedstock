@@ -1,5 +1,5 @@
 {% set name = "aim" %}
-{% set version = "3.20.1" %}
+{% set version = "3.21.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/aim-{{ version }}.tar.gz
-  sha256: b2fb2aaf78a63a9242a8681b013b18c7ac99cb3b011b88f4cf9621d4fa1f7a32
+  sha256: d85113f65892cbdc389df53237f7dac99db2b0c6afa88d9404d89495f6449852
 
 build:
   number: 0
@@ -32,12 +32,12 @@ requirements:
     - python
     - pip
     - cython ==3.0.*
-    - aimrocks ==0.4.0
+    - aimrocks ==0.5.*
   run:
     - python
-    - aim-ui ==3.20.1
+    - aim-ui ==3.21.0
     - aimrecords ==0.0.7
-    - aimrocks ==0.4.0
+    - aimrocks ==0.5.*
     - cachetools >=4.0.0
     - click >=7.0
     - cryptography >=3.0
