@@ -1,5 +1,5 @@
 {% set name = "aim" %}
-{% set version = "3.20.1" %}
+{% set version = "3.24.0" %}
 
 package:
   name: {{ name|lower }}
