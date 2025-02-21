@@ -6,7 +6,7 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/aim-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/aim-{{ version }}.tar.gz
   sha256: f78fb3c8432179d80b3f6c767c08b001fd22773d4011011eb8523373bf1ae87d
 
 build:
