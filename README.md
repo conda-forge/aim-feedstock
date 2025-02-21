@@ -242,6 +242,7 @@ Feedstock Maintainers
 =====================
 
 * [@gorarakelyan](https://github.com/gorarakelyan/)
+* [@maresb](https://github.com/maresb/)
 * [@mxr-conda](https://github.com/mxr-conda/)
 * [@psortos](https://github.com/psortos/)
 * [@synapticarbors](https://github.com/synapticarbors/)
