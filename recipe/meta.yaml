@@ -10,7 +10,7 @@ source:
   sha256: f78fb3c8432179d80b3f6c767c08b001fd22773d4011011eb8523373bf1ae87d
 
 build:
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . -vv
   # NOTE(hadim): windows is not available because of aimrocks missing there
   skip: true  # [win]
