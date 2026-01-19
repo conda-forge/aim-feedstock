@@ -30,7 +30,7 @@ requirements:
     - if: build_platform != target_platform
       then: cross-python_${{ target_platform }}
     - if: build_platform != target_platform or build_platform != target_platform
-      then: cython ==3.0
+      then: cython >=3.*
     - if: build_platform != target_platform or build_platform != target_platform
       then: aimrocks ==0.5.2
     - ${{ compiler('c') }}
@@ -42,7 +42,7 @@ requirements:
     - python
     - pip
     - setuptools
-    - cython ==3.0
+    - cython >=3.0
     - aimrocks ==0.5.2
   run:
     - python
