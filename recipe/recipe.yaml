@@ -39,13 +39,15 @@ requirements:
     - if: unix
       then: make
   host:
-    - python
+    # NOTE: restricted python only support 3.13
+    - python <3.13
     - pip
     - setuptools
     - cython >=3.0
     - aimrocks ==0.5.2
   run:
-    - python
+    # NOTE: restricted python only support 3.13
+    - python <3.13
     - aim-ui ==3.29.1
     - aimrecords ==0.0.7
     - aimrocks ==0.5.2
