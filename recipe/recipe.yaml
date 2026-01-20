@@ -16,6 +16,8 @@ build:
   # NOTE(hadim): windows is not available because of aimrocks missing there
   number: 0
   skip:
+    # restricted python does not support py313 yet 
+    - py >= 313
     - win
   script: ${{ PYTHON }} -m pip install . -vv
   python:
@@ -39,15 +41,13 @@ requirements:
     - if: unix
       then: make
   host:
-    # NOTE: restricted python only support 3.13
-    - python <3.13
+    - python
     - pip
     - setuptools
     - cython >=3.0
     - aimrocks ==0.5.2
   run:
-    # NOTE: restricted python only support 3.13
-    - python <3.13
+    - python
     - aim-ui ==3.29.1
     - aimrecords ==0.0.7
     - aimrocks ==0.5.2
