@@ -225,4 +225,5 @@ Feedstock Maintainers
 * [@mxr-conda](https://github.com/mxr-conda/)
 * [@psortos](https://github.com/psortos/)
 * [@synapticarbors](https://github.com/synapticarbors/)
+* [@daenny](https://github.com/daenny/)
 
