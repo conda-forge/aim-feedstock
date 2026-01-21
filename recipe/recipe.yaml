@@ -28,13 +28,10 @@ build:
 requirements:
   build:
     - if: build_platform != target_platform
-      then: python
-    - if: build_platform != target_platform
-      then: cross-python_${{ target_platform }}
-    - if: build_platform != target_platform or build_platform != target_platform
-      then: cython ==3.2.4
-    - if: build_platform != target_platform or build_platform != target_platform
-      then: aimrocks ==0.5.2
+      then:
+        - python
+        - cross-python_${{ target_platform }}
+        - cython
     - ${{ compiler('c') }}
     - ${{ compiler('cxx') }}
     - ${{ stdlib('c') }}
@@ -78,11 +75,8 @@ tests:
   - python:
       imports:
         - aim
-  - requirements:
-      run:
-        - pip
-    script:
-      - pip check
+      pip_check: true
+  - script:
       - aim --help
       - aim-watcher --help
 
@@ -100,3 +94,4 @@ extra:
     - mxr-conda
     - synapticarbors
     - maresb
+    - daenny
