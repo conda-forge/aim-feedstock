@@ -1,0 +1,12 @@
+python:
+  - 3.10.* *_cpython
+  - 3.11.* *_cpython
+  - 3.12.* *_cpython
+is_python_min:
+  - true
+  - false
+  - false
+zip_keys:
+  -
+    - python
+    - is_python_min
