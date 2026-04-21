@@ -90,7 +90,6 @@ about:
 
 extra:
   recipe-maintainers:
-    - gorarakelyan
     - psortos
     - mxr-conda
     - synapticarbors
